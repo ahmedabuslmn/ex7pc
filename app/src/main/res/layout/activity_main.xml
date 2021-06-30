@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/cardview_light_background"
+    >
+
+    <EditText
+        android:id="@+id/idtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="invisible"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <TextView
+        android:id="@+id/statusTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" wating... "
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:background="#a4c639"
+      />
+
+    <ImageView
+        android:id="@+id/hummusImg"
+        android:layout_width="58dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idtext"
+        app:srcCompat="@drawable/hummus" />
+
+    <CheckBox
+        android:id="@+id/hummusChx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_marginTop="130dp"
+        android:text="Hummus"
+        app:layout_constraintLeft_toRightOf="@id/hummusImg"
+         />
+
+    <ImageView
+        android:id="@+id/tihiniImg"
+        android:layout_width="56dp"
+        android:layout_height="41dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="37dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hummusImg"
+        app:srcCompat="@drawable/tihina" />
+
+    <CheckBox
+        android:id="@+id/tihinichx"
+        android:layout_width="81dp"
+        android:layout_height="43dp"
+        android:text="tihini"
+        android:layout_marginLeft="35dp"
+        app:layout_constraintTop_toBottomOf="@id/hummusChx"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toRightOf="@id/tihiniImg"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="53dp"
+        android:layout_height="50dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="37dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tihiniImg"
+        app:srcCompat="@drawable/cc" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="60dp"
+        android:layout_height="44dp"
+        android:text="-"
+        app:layout_constraintLeft_toRightOf="@id/imageView4"
+        app:layout_constraintTop_toBottomOf="@id/tihinichx"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/editNum"
+        android:layout_width="25dp"
+        android:layout_height="31dp"
+        app:layout_constraintLeft_toRightOf="@+id/minus"
+        app:layout_constraintTop_toBottomOf="@id/tihinichx"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:text="0"
+
+
+        />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="52dp"
+        android:layout_height="40dp"
+        android:text="+"
+        app:layout_constraintLeft_toRightOf="@id/editNum"
+        app:layout_constraintTop_toBottomOf="@id/tihinichx"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <Button
+        android:id="@+id/addOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <EditText
+        android:id="@+id/commentTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:hint="comment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView4"
+        android:layout_marginTop="30dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:layout_constraintTop_toBottomOf="@id/minus"
+        app:layout_constraintLeft_toRightOf="@id/commentTxt"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#5b39c6"
+        android:text="  new reservation  "
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/gustNmae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nmae:"
+      app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"
+        />
+
+    <ImageView
+        android:id="@+id/trash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+       app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="6dp"
+        android:background="#a4c639"
+        android:visibility="invisible"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
